@@ -1,0 +1,23 @@
+<%= button_to "Inicio", users_path, method: :get  %>
+<h2>Chatea con:</h2>
+<h1><%= @conversation_name %></h1>
+
+<%= form_tag(new_message_path(@conversation.id), method: "post") do %>
+    <%= label_tag(:content, "Nuevo mensaje:") %>
+    <%= text_field_tag(:content) %>
+    <%= submit_tag("Enviar") %>
+<% end %>
+
+<h2>Mensajes</h2>
+<ul>
+    <% @messages.each do |message| %>
+        <li>
+            <%= message.created_at%>
+            <a> >> </a>
+            <%= message.content %>
+            <a> ...</a>
+            <a>Enviado por </a>
+            <%= message.user.email%>       
+        </li>
+    <% end %>
+</ul>

@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: test
+
+production:
+  adapter: redis
+  url: redis.5kzjci.ng.0001.use2.cache.amazonaws.com:6379
+  #channel_prefix: chat_production

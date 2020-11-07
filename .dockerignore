@@ -1,0 +1,4 @@
+node_modules
+.env
+lineas_utiles_chat.md
+test.pem

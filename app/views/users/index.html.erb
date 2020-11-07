@@ -1,0 +1,31 @@
+<%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete  %>
+
+<h3>Bienvenido,</h3>
+<h2><%=current_user.email%></h2>
+
+<h2>¡Envía los mensajes que quieras!</h2>
+
+<h3>A otros usuarios</h3>
+<ul>
+    <% @other_users.each do |other_user| %>
+        <li>
+            <%= link_to other_user.email, redirect_or_create_path(other_user) %>
+        </li>
+    <% end %>
+</ul>
+
+<h3>A salas de chat</h3>
+
+<%= form_tag(new_room_path, method: "post") do %>
+    <%= label_tag(:title, "¡Crea una sala de chat!") %>
+    <%= text_field_tag(:title) %>
+    <%= submit_tag("Crear") %>
+<% end %>
+
+<ul>
+    <% @group_conversations.each do |group_conversation| %>
+        <li>
+            <%= link_to group_conversation.title, conversation_path(group_conversation) %>
+        </li>
+    <% end %>
+</ul>
