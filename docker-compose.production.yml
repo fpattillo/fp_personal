@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    container_name: arquichat-repo
+    image: 780722053658.dkr.ecr.us-east-2.amazonaws.com/Arquichat:latest
+    restart: always
+    ports:
+      - "7777:7777"
+    env_file: 
+      - /home/ubuntu/fp_personal/.env
