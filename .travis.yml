@@ -7,3 +7,9 @@ env:
 services:
     - docker
     - postgresql
+branches:
+    only:
+        - main
+install:
+    - docker-compose build
+    - docker-compose run --rm web rails db:create db:schema:load
