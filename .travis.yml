@@ -12,6 +12,7 @@ install:
     - echo "install nothing?"
 
 script:
+    - echo "no tests yet"
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
