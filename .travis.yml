@@ -7,7 +7,7 @@ services:
     - docker
 branches:
     only:
-        - master
+        - main
 install:
     - docker-compose build
 
@@ -49,4 +49,4 @@ deploy:
   region: us-east-2
   wait_until_deployed: true #wise thing to do
   on:
-    branch: master
+    branch: main
