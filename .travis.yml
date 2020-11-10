@@ -38,6 +38,8 @@ deploy:
   bucket: "arquichat-travis-deploy" #target bucket to use
   region: us-east-2 
   upload-dir: latest
+  on:
+    all_branches: true
 - provider: codedeploy #Uploading to target group
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
