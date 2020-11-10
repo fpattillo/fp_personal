@@ -1,7 +1,6 @@
 language: ruby
 rvm:
     - 2.5
-
 env:
     - AWS_USER_ID:"780722053658" AWS_ECR_APP="780722053658.dkr.ecr.us-east-2.amazonaws.com/arquichat-repo"
 services:
