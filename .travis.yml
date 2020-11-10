@@ -6,7 +6,6 @@ env:
     - AWS_USER_ID:"780722053658" AWS_ECR_API="780722053658.dkr.ecr.us-east-2.amazonaws.com/arquichat-repo"
 services:
     - docker
-    - postgresql
 branches:
     only:
         - main
@@ -14,7 +13,6 @@ install:
     - docker-compose build
 
 script:
-    - docker-compose up -d
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
@@ -31,4 +29,3 @@ after_success:
     - docker tag $AWS_ECR_API:latest
     - docker push $AWS_ECR_API:latest
     - docker images
-
