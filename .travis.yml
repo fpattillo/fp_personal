@@ -13,7 +13,6 @@ install:
     - docker-compose build
 
 script:
-    - bundle exec rake test
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
