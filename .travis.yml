@@ -8,7 +8,7 @@ services:
     - docker
 branches:
     only:
-        - main
+        - master
 install:
     - docker-compose build
 
@@ -25,7 +25,7 @@ after_success:
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
     - eval $(aws ecr get-login --region us-east-2 --no-include-email)
-    - docker build -t $AWS_ECR_APP:latest
+    - docker build -t $AWS_ECR_APP:latest .
     - docker tag $AWS_ECR_APP:latest
     - docker push $AWS_ECR_APP:latest
     - docker images
@@ -50,4 +50,4 @@ deploy:
   region: us-east-2
   wait_until_deployed: true #wise thing to do
   on:
-    branch: main
+    branch: master
