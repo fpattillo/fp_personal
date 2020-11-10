@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: scripts
-    destination: /home/ubuntu/fp_personal
+    destination: /home/ubuntu/iic2173-proyecto-semestral-grupo9
 permissions:
   - object: scripts
     pattern: "**"
