@@ -8,8 +8,6 @@ services:
 branches:
     only:
         - main
-install:
-    - docker-compose build
 
 script:
     - sed -i -e 's/\r$/\n/' scripts/start.sh
