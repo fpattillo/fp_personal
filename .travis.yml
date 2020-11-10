@@ -3,7 +3,7 @@ rvm:
     - 2.5
 
 env:
-    - AWS_USER_ID:"780722053658" AWS_ECR_API="780722053658.dkr.ecr.us-east-2.amazonaws.com/arquichat-repo"
+    - AWS_USER_ID:"780722053658" AWS_ECR_API="780722053658.dkr.ecr.us-east-1.amazonaws.com/arquichat-repo"
 services:
     - docker
     - postgresql
@@ -32,3 +32,24 @@ after_success:
     - docker push $AWS_ECR_API:latest
     - docker images
 
+deploy:
+    - provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        local_dir: dpl_cd_upload
+        skip_cleanup: true
+        bucket: "arquichat-travis-deploy"
+        region: us-east-2
+        upload-dir: latest
+    - provider: codedeploy
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        bucket: "arquichat-travis-deploy"
+        key: latest/latest.zip
+        bundle_type: zip
+        application: Arquichat
+        deployment_group: arquichat
+        region: us-east-2
+        wait_until_deployed: true
+        on:
+            branch: main
