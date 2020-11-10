@@ -8,6 +8,8 @@ services:
 branches:
     only:
         - main
+install:
+    - echo "install nothing?"
 
 script:
     - sed -i -e 's/\r$/\n/' scripts/start.sh
