@@ -5,46 +5,46 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+arquichat/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-*
+arquichat/db/*.sqlite3
+arquichat/db/*.sqlite3-journal
+arquichat/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+arquichat/log/*
+arquichat/tmp/*
+!arquichat/log/.keep
+!arquichat/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+arquichat/tmp/pids/*
+!arquichat/tmp/pids/
+!arquichat/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
+arquichat/storage/*
+!arquichat/storage/.keep
 
-/public/assets
-.byebug_history
+arquichat/public/assets
+arquichat/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+arquichat/config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+arquichat/public/packs
+arquichat/public/packs-test
+arquichat/node_modules
+arquichat/yarn-error.log
+arquichat/yarn-debug.log*
+arquichat/.yarn-integrity
 
 # Otros
-lineas_utiles_chat.md
+arquichat/lineas_utiles_chat.md
 
-.env
+arquichat/.env
 
-test.pem
+arquichat/test.pem
 
-data/certbot/conf/
+arquichat/data/certbot/conf/

@@ -21,6 +21,7 @@ script:
     - mv latest.zip dpl_cd_upload/latest.zip
 
 after_success:
+    - cd arquichat
     - docker --version
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
@@ -29,6 +30,7 @@ after_success:
     - docker tag $AWS_ECR_APP:latest
     - docker push $AWS_ECR_APP:latest
     - docker images
+    - cd ..
 
 deploy:
 - provider: s3 #To upload the code to s3
