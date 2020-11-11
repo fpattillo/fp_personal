@@ -13,7 +13,7 @@ install:
 
 script:
     - docker-compose build
-    - docker-compose run --rm web rails db:create db:schema:load db:migrate
+    - docker-compose exec web rails db:migrate RAILS_ENV=test
     - docker-compose up -d
     - echo "running tests"
     - docker-compose exec web bundle exec rspec
