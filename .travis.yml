@@ -12,11 +12,7 @@ install:
     - echo "install nothing?"
 
 script:
-    - docker-compose build
-    - docker-compose exec web rails db:migrate RAILS_ENV=test
-    - docker-compose up -d
     - echo "running tests"
-    - docker-compose exec web bundle exec rspec
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
