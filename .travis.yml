@@ -21,7 +21,7 @@ script:
     - mv latest.zip dpl_cd_upload/latest.zip
 
 after_success:
-    - cd arquichat
+    - cd iic2173-proyecto-semestral-grupo9
     - docker --version
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
