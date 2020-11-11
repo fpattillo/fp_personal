@@ -13,9 +13,9 @@ install:
 
 script:
     - echo "no tests yet"
-    - sed -i -e 's/\r$/\n/' scripts/start.sh
-    - sed -i -e 's/\r$/\n/' scripts/stop.sh
-    - sed -i -e 's/\r$/\n/' scripts/install.sh
+    - sed -i -e 's/\r$/\n/' start.sh
+    - sed -i -e 's/\r$/\n/' stop.sh
+    - sed -i -e 's/\r$/\n/' install.sh
     - zip -r latest *
     - mkdir -p dpl_cd_upload
     - mv latest.zip dpl_cd_upload/latest.zip
