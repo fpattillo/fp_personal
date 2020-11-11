@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker-compose -f /home/ubuntu/arquichat/docker-compose.yml up -d 
+sudo docker-compose -f /home/ubuntu/iic2173-proyecto-semestral-grupo9/docker-compose.yml up -d 
