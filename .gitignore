@@ -5,46 +5,46 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-arquichat/.bundle
+iic2173-proyecto-semestral-grupo9/.bundle
 
 # Ignore the default SQLite database.
-arquichat/db/*.sqlite3
-arquichat/db/*.sqlite3-journal
-arquichat/db/*.sqlite3-*
+iic2173-proyecto-semestral-grupo9/db/*.sqlite3
+iic2173-proyecto-semestral-grupo9/db/*.sqlite3-journal
+iic2173-proyecto-semestral-grupo9/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-arquichat/log/*
-arquichat/tmp/*
-!arquichat/log/.keep
-!arquichat/tmp/.keep
+iic2173-proyecto-semestral-grupo9/log/*
+iic2173-proyecto-semestral-grupo9/tmp/*
+!iic2173-proyecto-semestral-grupo9/log/.keep
+!iic2173-proyecto-semestral-grupo9/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-arquichat/tmp/pids/*
-!arquichat/tmp/pids/
-!arquichat/tmp/pids/.keep
+iic2173-proyecto-semestral-grupo9/tmp/pids/*
+!iic2173-proyecto-semestral-grupo9/tmp/pids/
+!iic2173-proyecto-semestral-grupo9/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-arquichat/storage/*
-!arquichat/storage/.keep
+iic2173-proyecto-semestral-grupo9/storage/*
+!iic2173-proyecto-semestral-grupo9/storage/.keep
 
-arquichat/public/assets
-arquichat/.byebug_history
+iic2173-proyecto-semestral-grupo9/public/assets
+iic2173-proyecto-semestral-grupo9/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-arquichat/config/master.key
+iic2173-proyecto-semestral-grupo9/config/master.key
 
-arquichat/public/packs
-arquichat/public/packs-test
-arquichat/node_modules
-arquichat/yarn-error.log
-arquichat/yarn-debug.log*
-arquichat/.yarn-integrity
+iic2173-proyecto-semestral-grupo9/public/packs
+iic2173-proyecto-semestral-grupo9/public/packs-test
+iic2173-proyecto-semestral-grupo9/node_modules
+iic2173-proyecto-semestral-grupo9/yarn-error.log
+iic2173-proyecto-semestral-grupo9/yarn-debug.log*
+iic2173-proyecto-semestral-grupo9/.yarn-integrity
 
 # Otros
-arquichat/lineas_utiles_chat.md
+iic2173-proyecto-semestral-grupo9/lineas_utiles_chat.md
 
-arquichat/.env
+iic2173-proyecto-semestral-grupo9/.env
 
-arquichat/test.pem
+iic2173-proyecto-semestral-grupo9/test.pem
 
-arquichat/data/certbot/conf/
+iic2173-proyecto-semestral-grupo9/data/certbot/conf/

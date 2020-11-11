@@ -4,8 +4,8 @@ os: linux
 files:
   - source: scripts
     destination: /home/ubuntu
-  - source: arquichat
-    destination: /home/ubuntu/arquichat
+  - source: iic2173-proyecto-semestral-grupo9
+    destination: /home/ubuntu/iic2173-proyecto-semestral-grupo9
 permissions:
   - object: scripts
     pattern: "**"
