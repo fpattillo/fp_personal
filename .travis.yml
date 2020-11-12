@@ -12,12 +12,14 @@ install:
     - echo "install nothing?"
 
 script:
+    - cd iic2173-proyecto-semestral-grupo9
     - docker-compose build
     - docker-compose run --rm web bundle install
     - docker-compose run --rm web rails db:create db:schema:load
     - docker-compose up -d
     - docker-compose exec web bundle exec rspec
     - echo "running tests"
+    - cd ..
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
