@@ -12,19 +12,20 @@ install:
     - echo "install nothing?"
 
 script:
-#    - cd iic2173-proyecto-semestral-grupo9
-#    - docker-compose build
-#    - docker-compose run --rm web bundle install
-#    - echo "POSTGRES_HOST = $POSTGRES_HOST" >> .env
-#    - echo "POSTGRES_USER = $POSTGRES_USER" >> .env
-#    - echo "POSTGRES_PASSWORD = $POSTGRES_PASSWORD" >> .env
-#    - docker-compose run --rm web rails db:create db:schema:load
-#    - docker-compose up -d
-#    - docker-compose exec web bundle exec rspec
-#    - echo "running tests"
-#    - docker-compose stop
-#    - docker-compose down
-#    - cd ..
+    - cd iic2173-proyecto-semestral-grupo9
+    - docker-compose build
+    - docker-compose run --rm web bundle install
+    - echo "POSTGRES_HOST = $POSTGRES_HOST" >> .env
+    - echo "POSTGRES_USER = $POSTGRES_USER" >> .env
+    - echo "POSTGRES_PASSWORD = $POSTGRES_PASSWORD" >> .env
+    - docker-compose run --rm web rails db:create db:schema:load
+    - docker-compose up -d
+    - echo "running tests"
+    - docker-compose exec web bundle exec rspec
+    - echo "finished tests"
+    - docker-compose stop
+    - docker-compose down
+    - cd ..
     - sed -i -e 's/\r$/\n/' scripts/start.sh
     - sed -i -e 's/\r$/\n/' scripts/stop.sh
     - sed -i -e 's/\r$/\n/' scripts/install.sh
