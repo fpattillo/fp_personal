@@ -45,8 +45,8 @@ deploy:
   bucket: "arquichat-travis-deploy" #target bucket to use, defined before
   key: latest/latest.zip #Source code, you can use any name but must be consistent
   bundle_type: zip
-  application: Arquichat
-  deployment_group: arquichat
+  application: Arquichat-final
+  deployment_group: arquichat-dg
   region: us-east-2
   wait_until_deployed: true #wise thing to do
   on:
